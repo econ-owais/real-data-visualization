@@ -25,8 +25,6 @@ Visualize trends using interactive plotly graphs.
 
 📈 Models Used
 r
-Copy
-Edit
 # Model 1: Linear Regression
 model1 <- lm(wage ~ educ + exper + tenure, data = df)
 
@@ -64,8 +62,6 @@ Open the project in RStudio.
 Install required libraries:
 
 r
-Copy
-Edit
 install. packages(c("plotly", "ggplot2", "htmlwidgets", "readxl"))
 Load the dataset and run the R scripts.
 
