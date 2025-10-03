@@ -1,6 +1,6 @@
 library(readxl)
 # part 01---- 
-df <- read_excel("C:/Users/Pakistan/Desktop/owais_ali_shah__mid-term_2025/Mid Term Applied 2025.xlsx")
+df <- read_excel("data/wage data 2025.xlsx")
 View(df)
 
 # Show the first few rows
@@ -88,14 +88,14 @@ vif_model <- vif(model1)
 #model1 – Linear: wage ~ educ + exper + tenure
 # model2 – Log-linear: log(wage) ~ educ + exper + tenure
 summary(model1)$r.squared
-summary(model1)$r.squared
+summary(model2)$r.squared
 
 #Part 7: Predict Wage for New Observation----
 # New data for prediction
 new_data <- data.frame(educ = 16, exper = 10, tenure = 5)
 
 # Predict log(wage)
-predicted_log_wage <- predict(model1, newdata = new_data)
+predicted_log_wage <- predict(model2, newdata = new_data)
 
 # Convert log(wage) to wage
 predicted_wage <- exp(predicted_log_wage)
@@ -104,9 +104,9 @@ predicted_wage
 
 
 #1. Scatter Plot: Wage vs Education (colored by Experience)
-install.packages("plotly")
-install.packages("ggplot2")
-install.packages("htmlwidgets")
+# install.packages("plotly")
+# install.packages("ggplot2")
+# install.packages("htmlwidgets")
 
 library(plotly)
 library(ggplot2)
